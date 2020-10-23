@@ -1,0 +1,6 @@
+.carousel__slide--inactive{
+    display: none;
+}
+.carousel__slide .carousel__slide--active{
+    display: block;
+}
