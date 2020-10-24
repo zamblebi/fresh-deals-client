@@ -13,7 +13,7 @@ const Slide = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    height: 500px;
+    height: 50vh;
     color: #ffff;
     .carousel__slide--content{
         height: 100%;
@@ -74,18 +74,20 @@ const Carousel = ({props}) => {
     
     return (
         <div className="carousel">
-                <a href="#" className="carousel__arrow carousel___arrow--left" onClick={e => goToPrevSlide(e)}> <img src={prev} alt=""/> </a>
                     <ul className="carousel__slides">
                     { dataSlide.map((slide,index) => (
                         <li className={index == activeIndex ? 'carousel__slide carousel__slide--active' : 'carousel__slide--inactive'} key={index}>
-                                <Slide imageBck={index == activeIndex ? slide.image: ''}>
+                                <Slide imageBck={index == activeIndex ? slide.image: ''} >
                                     {/* <img src={} alt=""/> */}
                                       <p className="carousel__slide--content">{slide.title}</p>
                                 </Slide>
                                 </li>
                     ))}
                     </ul>
-                <a href="#" className="carousel__arrow carousel___arrow--right" onClick={e => goToNextSlide(e)}> <img src={next} alt=""/> </a>
+                <div className="carousel__arrow">
+                    <a href="#" className="carousel___arrow--left" onClick={e => goToPrevSlide(e)}> <img src={prev} alt=""/> </a>
+                    <a href="#" className="carousel___arrow--right" onClick={e => goToNextSlide(e)}> <img src={next} alt=""/> </a>
+                </div>
         </div>
     )
 }
