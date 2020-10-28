@@ -4,3 +4,37 @@
 .carousel__slide .carousel__slide--active{
     display: block;
 }
+.carousel__arrow img{
+    width: 50px;
+}
+
+.carousel{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.carousel__arrow{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.carousel__arrow--right{
+    /* right:20px; */
+    align-self: center;
+}
+.carousel__slides{
+    padding-left: 0;
+    /* display: flex; */
+    /* align-items: center; */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.carousel__slide img{
+    width: 100%;
+}

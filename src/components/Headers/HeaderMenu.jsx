@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState} from 'react'
 import {BrowserRouter as Router, Switch,Route,Link} from "react-router-dom"
 import Shops from '../../pages/Shops'
 import Articles from '../../pages/Articles'
@@ -12,16 +12,37 @@ import './Header.css'
 
 
 const HeaderMenu = () => {
+    
+    const [show, setShow] = useState(false);
+
+    const showMenu = (e)=> {
+        e.preventDefault();
+
+        if(show == false){
+            setShow(true);
+        }else{
+            setShow(false);
+        }
+
+    }
+
     return (
         <Router>
+            {/* Menu responsive  */}
+
+
+
             <div className="navigation_menu">
-                <ul>
-                    
+            <div className="toggle-button">
+                <button className="toggle-active" onClick={(e)=>showMenu(e)}>Menu</button>
+            </div>
+                <ul className={show == true ? "left_header_menu" : "hide_menu"}>
                     
                     <li>
                         <Link to="/all_articles">Toutes les annonces</Link>
                     </li>
                     <li>
+                    
                         <Link to="/all_shops">Boutiques</Link>
                     </li>
                 </ul>
