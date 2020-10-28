@@ -43,3 +43,35 @@
     padding: 0 !important;
     padding-left: 10px !important;
 }
+
+.toggle-button{
+    display: none;
+}
+
+
+/* Carousel mobile */
+
+@media(max-width: 700px){
+    .toggle-button{
+        display: block;
+    }
+    /* .navigation_menu{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigation_menu .right_header_section{
+        align-self: flex-start;
+    } */
+     .left_header_menu{
+        display: none;
+        /* flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        
+    }
+    /* .hide_menu{
+        display: show !important;
+    } */
+}
