@@ -8,6 +8,8 @@ import LoginForm from './LoginForm'
 import PostArticle from '../PostArticle'
 // CSS
 import './Header.css'
+import RegisterForm from './RegisterForm'
+
 
 
 const HeaderMenu = () => {
@@ -75,6 +77,9 @@ const HeaderMenu = () => {
                 
             </div> */}
             <Switch>
+                    <Route path="/register">
+                        <RegisterForm/>
+                    </Route>
                     <Route path="/post_article">
                         <PostArticle/>
                     </Route>
