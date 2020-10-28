@@ -3,16 +3,37 @@ import React from 'react'
 
 const LoginForm = () => {
     return (
-        <div>
-            <form action="" className="w-full max-w-sm">
+        <div className="m-2">
+            <form action="" className="w-full max-w-sm m-auto h-auto pt-20 flex flex-col justify-center">
                 <div className="md:flex md:items-center mb-6">
                     <div className="md:w-1/3">
-                        <label htmlFor="inline-email" className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        <label htmlFor="inline-email" className="labelLogin">
                             Email
                         </label>
                     </div>
+
                     <div className="md:w-2/3">
-                        <input type="text" id="inline-email" className="bg-gray-300 apparence-none border-2 border-gray-300 rounded w-full py-2 px-4 text-gray-700 laeding-tight focus:outline-none focus:bg-white focus:border-green-200"/>
+                        <input type="text" id="inline-email" className="inputLogin"/>
+                    </div>
+
+                </div>
+                <div className="md:flex md:items-center mb-6">
+
+                <div className="md:w-1/3">
+                    <label htmlFor="inline-password" className="labelLogin">
+                        Password
+                    </label>
+                </div>
+
+                <div className="md:w-2/3">
+                    <input type="password" for="inline-password" className="inputLogin"/>
+                </div>
+                
+                </div>
+                
+                <div className="md:flex md:items-center">
+                    <div className="md:w-1/3 w-full m-auto">
+                        <button className="btnLogin">Connect</button>
                     </div>
                 </div>
             </form>

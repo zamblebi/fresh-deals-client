@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+
+@tailwind utilities;
+
+
+@layer components{
+    .inputLogin{
+        @apply bg-gray-300 border-2 border-gray-300 rounded w-full py-2 px-4 text-gray-700;
+    }
+    .inputLogin:focus{        
+        @apply border-green-200 outline-none bg-white;
+    }
+
+    .labelLogin{
+        @apply block text-gray-500 font-bold;
+    }
+    .btnLogin{
+        @apply shadow bg-green-500 py-2 px-5 rounded text-black m-auto;
+    }
+    .btnLogin:hover{
+        @apply bg-green-400;
+    }
+    .btnLogin:focus{
+        @apply shadow-outline outline-none text-white font-bold py-2 px-5 rounded;
+    }
+
+    @screen md{
+        .labelLogin{
+            @apply text-right mb-1 mb-0 pr-4;
+        }
+    }
+
+
+}
